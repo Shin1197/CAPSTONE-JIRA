@@ -1,0 +1,428 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.increased-legibility::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* background-color: black; */
+  /* opacity: 0.4; */
+  background: linear-gradient(0deg,
+      rgb(0 0 0 / 0.7),
+      rgb(0 0 0 / 0));
+  z-index: -1;
+}
+
+
+/* CSS SIDE BAR */
+.sideBar {
+  position: fixed;
+  background-color: #0748A6;
+  color: white;
+  height: 100vh;
+  width: 65px;
+  transition: .1s;
+  z-index: 999;
+}
+
+.sideBarLogo {
+  position: relative;
+  padding: 35px 19px;
+}
+
+.sideBar-link {
+  position: relative;
+  padding-left: 60px;
+  height: 42px;
+  line-height: 42px;
+  cursor: pointer;
+}
+
+.sideBar-link:hover {
+  background-color: #0b5dd1;
+}
+
+.sideBar-linkInside {
+  position: absolute;
+  left: 17px;
+  top: 6px;
+}
+
+.sideBar-title {
+  position: relative;
+  visibility: hidden;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0;
+  transition: .1s;
+}
+
+.sideBar:hover {
+  width: 200px;
+  box-shadow: 7px 0px 11px -3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 7px 0px 11px -3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 7px 0px 11px -3px rgba(0, 0, 0, 0.5);
+}
+
+.sideBar:hover .sideBar-title {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* TINY */
+.tox-statusbar__branding {
+  display: none;
+}
+
+/* Skelekton table */
+.myTable :where(.css-mxhywb).ant-skeleton .ant-skeleton-content .ant-skeleton-title {
+  width: 100% !important;
+}
+
+.dark .myTable :where(.css-mxhywb).ant-skeleton .ant-skeleton-content .ant-skeleton-title {
+  width: 100% !important;
+}
+
+.myTable :where(.css-mxhywb).ant-skeleton .ant-skeleton-content .ant-skeleton-paragraph>li:last-child:not(:first-child):not(:nth-child(2)) {
+  width: 100% !important;
+}
+
+:where(.css-mxhywb).ant-modal .ant-modal-close-x {
+  line-height: 12px;
+}
+
+:where(.css-mxhywb).ant-modal .ant-modal-close {
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+}
+
+/* Button antd */
+:where(.css-mxhywb).ant-btn-primary {
+  background-color: #1677ff !important;
+}
+
+:where(.css-mxhywb).ant-btn-primary:hover {
+  background-color: #0a53ba !important;
+}
+
+/* image members project detail */
+.coverImgMember {
+  display: inline-flex;
+  margin-left: -2px;
+  border-radius: 50%;
+  transition: transform 0.1s ease 0s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.coverImgMember:hover {
+  transform: translateY(-5px);
+}
+
+.imgMember {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(235, 236, 240);
+}
+
+.borderForImg {
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px;
+}
+
+.dark .borderForImg {
+  box-shadow: rgb(31, 32, 32) 0px 0px 0px 2px;
+}
+
+.shadowKanban {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 2px 0px;
+  transition: background 0.1s ease 0s;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Ck EDITOR */
+.ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable,
+.ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
+.ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+/* select antd */
+:where(.css-mxhywb).ant-select-multiple .ant-select-selection-item-remove {
+  line-height: 18px;
+}
+
+:where(.css-mxhywb).ant-select .ant-select-clear {
+  top: 43%;
+}
+
+/* slider antd */
+:where(.css-mxhywb).ant-slider .ant-slider-track {
+  background-color: #0b5dd1;
+}
+
+:where(.css-mxhywb).ant-slider .ant-slider-rail {
+  background-color: rgb(200, 200, 200);
+}
+
+.timeTrackingSlider:where(.css-mxhywb).ant-slider.ant-slider-disabled {
+  cursor: pointer;
+}
+
+.timeTrackingSlider:where(.css-mxhywb).ant-slider.ant-slider-disabled .ant-slider-track {
+  background-color: #0b5dd1 !important;
+}
+
+.timeTrackingSlider:where(.css-mxhywb).ant-slider.ant-slider-disabled .ant-slider-handle::after {
+  display: none;
+}
+
+:where(.css-mxhywb).ant-slider .ant-slider-handle {
+  display: none;
+}
+
+/* Modal create Task */
+.modalCreateTask:where(.css-mxhywb).ant-modal .ant-modal-content {
+  padding: 20px 50px !important;
+}
+
+:where(.css-mxhywb).ant-modal .ant-modal-content {
+  padding: 20px 30px;
+
+}
+
+.dark :where(.css-mxhywb).ant-modal .ant-modal-content {
+  background-color: #1E1E1E;
+  color: white;
+  border: 1px solid gray;
+}
+
+.dark :where(.css-mxhywb).ant-modal .ant-modal-close {
+  color: white;
+}
+
+.dark :where(.css-mxhywb).ant-modal .ant-modal-close:hover {
+  background-color: gray;
+}
+
+/* TABLE */
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table {
+  background-color: #1E1E1E;
+  color: white;
+  border-color: #0b5dd1;
+}
+
+.dark :where(.css-mxhywb).ant-table-wrapper td.ant-table-column-sort {
+  background-color: #29314b;
+}
+
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-tbody>tr.ant-table-row:hover>td,
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-tbody>tr>td.ant-table-cell-row-hover {
+  background: #505050;
+}
+
+:where(.css-mxhywb).ant-table-wrapper .ant-table-column-sorter-up.active,
+:where(.css-mxhywb).ant-table-wrapper .ant-table-column-sorter-down.active {
+  color: white;
+}
+
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-thead>tr>th,
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-thead>tr>td {
+  background-color: #101010;
+  color: white;
+}
+
+/* TOOLTIP */
+.dark :where(.css-mxhywb).ant-popover .ant-popover-inner {
+  background-color: #505050;
+  color: white !important;
+}
+
+.dark :where(.css-mxhywb).ant-pagination .ant-pagination-item-active a {
+  background: #393E46;
+  border-radius: 4px;
+}
+
+.dark :where(.css-mxhywb).ant-popconfirm .ant-popconfirm-inner-content {
+  color: white !important;
+}
+
+.dark :where(.css-mxhywb).ant-popconfirm .ant-popconfirm-message {
+  color: white;
+}
+
+.dark :where(.css-mxhywb).ant-popconfirm .ant-popconfirm-description {
+  color: white;
+}
+
+.dark :where(.css-mxhywb).ant-btn-default {
+  color: white;
+}
+
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-filter-trigger {
+  color: white;
+}
+
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-column-sorter {
+  color: gray;
+}
+
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-tbody>tr>th,
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-tbody>tr>td {
+  border-bottom: 1px solid #575757;
+}
+
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-tbody>tr.ant-table-placeholder:hover>th,
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-tbody>tr.ant-table-placeholder:hover>td,
+.dark :where(.css-mxhywb).ant-table-wrapper .ant-table-tbody>tr.ant-table-placeholder {
+  background-color: #2D2D2D;
+}
+
+.dark :where(.css-mxhywb).ant-popover .ant-popover-title {
+  color: white;
+}
+
+:where(.css-mxhywb).ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+:where(.css-mxhywb).ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.assignMEM .assignMEMicon {
+  display: none;
+}
+
+.assignMEMicon {
+  left: -0.075px;
+  border-radius: 4px;
+}
+
+.assignMEM:hover .assignMEMicon {
+  display: block;
+}
+
+
+.dark :where(.css-mxhywb).ant-dropdown .ant-table-filter-dropdown {
+  background-color: #2D2D2D;
+}
+
+.dark :where(.css-mxhywb).ant-radio-button-wrapper {
+  background-color: #2D2D2D;
+  color: white;
+}
+
+/* sweet */
+.dark .swal2-popup.swal2-toast {
+  background: #2D2D2D;
+  color: white;
+  border: 1px solid gray;
+}
+
+.commentDots {
+  display: inline-block;
+  padding: 2px 0px;
+  color: rgb(94, 108, 132);
+  font-size: 14.5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.commentDots::before {
+  position: relative;
+  top: -3px;
+  right: 1px;
+  content: "·";
+  display: inline-block;
+}
+
+/* SCROLL BAR */
+:root {
+  --primary: white;
+  --secondary: #4492ff;
+}
+.dark:root {
+  --primary: black;
+  --secondary: #0b5dd1;
+}
+
+/* Scrollbar styles */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--secondary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+/*   background: repeating-linear-gradient(
+    45deg,
+    var(--secondary),
+    var(--secondary) 5px,
+    var(--primary) 5px,
+    var(--primary) 10px
+  ); */
+  border-radius: 20px;
+  border: 3px solid var(--primary);
+}
+
+ 
